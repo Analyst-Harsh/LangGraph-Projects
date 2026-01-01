@@ -19,7 +19,7 @@ if user_input:
         st.write(user_input)
 
     messages: list[BaseMessage] = st.session_state.get("message_history", [])
-    response = workflow.invoke({"messages": messages})
+    response = workflow.invoke({"messages": messages})  # type: ignore
     st.session_state.get("message_history", []).append(AIMessage(content=response["ai_reply"]))
     with st.chat_message("ai"):
         st.write(response["ai_reply"])
