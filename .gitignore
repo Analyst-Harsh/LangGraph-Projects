@@ -2,3 +2,9 @@
 .env
 
 .mypy*
+*__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
